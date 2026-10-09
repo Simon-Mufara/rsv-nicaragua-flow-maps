@@ -1,6 +1,6 @@
 # RSV-A and RSV-B introductions to and exports from Nicaragua
 
-World flow maps showing where RSV-A and RSV-B were **introduced into Nicaragua from** (imports) and where they were **exported to** (exports). Curve thickness and point size scale with the number of events per region. The design follows Fig. 2B of the Uruguay SARS-CoV-2 paper.
+World flow maps showing where RSV-A and RSV-B were **introduced into Nicaragua from** (imports) and where they were **exported to** (exports). Curve thickness and point size scale with the number of events per region.
 
 ![Combined figure](results/figures/Figure_RSV_Nicaragua_transmission.png)
 
@@ -61,4 +61,4 @@ Mufara S. *RSV-A and RSV-B introductions to and exports from Nicaragua* (code re
 
 ## License
 
-Code is released under the MIT License (see `LICENSE`). Check data-sharing permissions before publishing input files.
+Code is released under the MIT License (see `LICENSE`). 
