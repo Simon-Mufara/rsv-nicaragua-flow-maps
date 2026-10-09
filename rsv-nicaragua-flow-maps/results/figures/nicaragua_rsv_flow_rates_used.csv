@@ -1,0 +1,20 @@
+"virus","direction","region","rate"
+"RSV-A","import","South America",7
+"RSV-A","import","North America",4
+"RSV-A","import","Central America",2
+"RSV-A","import","Europe",2
+"RSV-A","import","Middle East",1
+"RSV-A","export","South America",3
+"RSV-A","export","Middle East",2
+"RSV-A","export","Europe",1
+"RSV-A","export","North America",1
+"RSV-B","import","Asia",3
+"RSV-B","import","South America",2
+"RSV-B","import","Central America",1
+"RSV-B","import","Europe",1
+"RSV-B","import","North America",1
+"RSV-B","import","Oceania",1
+"RSV-B","export","North America",8
+"RSV-B","export","Europe",1
+"RSV-B","export","South America",1
+"RSV-B","export","South Korea",1
