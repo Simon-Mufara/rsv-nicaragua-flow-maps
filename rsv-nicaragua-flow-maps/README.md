@@ -6,6 +6,10 @@ World flow maps showing where RSV-A and RSV-B were **introduced into Nicaragua f
 
 *(Panels: A = RSV-A imports, B = RSV-A exports, C = RSV-B imports, D = RSV-B exports.)*
 
+**Version with origin dates** (each region node labelled with the earliest inferred node age, shown as month and year):
+
+![Combined figure with origin dates](results/figures_with_dates/Figure_RSV_Nicaragua_transmission_dates.png)
+
 ## Quick start
 
 1. Install [R](https://cran.r-project.org/) (>= 4.1, for the `|>` pipe) and, optionally, [RStudio](https://posit.co/download/rstudio-desktop/).
@@ -17,7 +21,11 @@ World flow maps showing where RSV-A and RSV-B were **introduced into Nicaragua f
 3. Put the four input files in `data/` (see [`data/README.md`](data/README.md)).
 4. Open the `.Rproj` in RStudio (or start R in the repo folder) and run:
    ```r
+   # maps without dates
    source("R/nicaragua_rsv_transmission_maps.R")
+
+   # maps with origin dates (Mon YYYY) on each region node
+   source("R/rsv_nicaragua_flow_maps_with_dates_v4.R")
    ```
    Missing packages are installed automatically on first run.
 
@@ -33,10 +41,15 @@ Written to `results/`:
 | `figures/map_RSVB_export.png/.pdf` | RSV-B exports from Nicaragua |
 | `figures/Figure_RSV_Nicaragua_transmission.png/.pdf` | Combined four-panel figure (A-D) |
 | `nicaragua_rsv_flow_rates_used.csv` | Tidy table of the counts plotted |
+| `figures_with_dates/map_RSV*_*_dates.png/.pdf` | Single maps with origin dates |
+| `figures_with_dates/Figure_RSV_Nicaragua_transmission_dates.png/.pdf` | Combined four-panel figure with origin dates |
+| `nicaragua_rsv_flow_rates_and_origin_dates.csv` | Counts plus the earliest origin date per region |
 
 ## Input format
 
 Each Excel file is an **event list**: column 1 is an event number and one other column holds the region name. The region column is detected automatically from its content, and the rate for a region is the number of distinct events. Long (`From`/`To`/`Rate`) and matrix formats are also supported.
+
+The dates script additionally needs a **`Node age`** column (decimal year, e.g. `2014.580`, filled on the first row of each event). It is converted to a calendar month and the earliest node age per region is shown as the origin date (e.g. `Jul 2014`). Set `label_style <- "year"` at the top of the script to show years only.
 
 ## Customising
 
@@ -45,7 +58,7 @@ Edit `region_info` near the top of the script to change a region's anchor point,
 ## Repository layout
 
 ```
-R/         analysis and plotting script
+R/         analysis and plotting scripts (with and without origin dates)
 data/      input Excel files (see data/README.md)
 results/   generated figures and flow-rate table
 report/    written report
